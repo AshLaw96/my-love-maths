@@ -8,23 +8,21 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-            } else {
+          } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
-            }
-        })
-
+          }
+        });
     }
 
     document.getElementById("answer-box").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             checkAnswer();
         }
-    })
+    });
 
     runGame("addition")
-
-})
+});
 
 /**
  * the main game "loop", called when the script is first loaded
